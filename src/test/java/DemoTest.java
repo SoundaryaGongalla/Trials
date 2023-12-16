@@ -51,6 +51,18 @@ public void scenario()
 	//change the sorting order high to low
 	
 	ele.click();
+	// click all products add to cart
+	List<WebElement> addtocart = driver.findElements(By.xpath("//button[.='ADD TO CART']"))	;
+	
+	for(WebElement e:addtocart)
+	{
+		e.click();
+	}
+	
+	// validate  the cart num6
+	
+	WebElement count=driver.findElement(By.className("shopping_cart_link fa-layers fa-fw"));
+	count.click();
 	
 	
 	
